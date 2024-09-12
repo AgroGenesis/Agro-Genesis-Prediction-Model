@@ -7,12 +7,12 @@ app = Flask(__name__)
 
 # Load the pre-trained models and preprocessing tools
 # Recommendation Models
-best_forest = joblib.load('crop_recommendation_model.pkl')
-scaler = joblib.load('crop_recommendation_scaler.pkl')
-pca = joblib.load('crop_recommendation_pca.pkl')
-encoder = joblib.load('crop_recommendation_label_encoder.pkl')
+best_forest = joblib.load('models/crop_recommendation_model.pkl')
+scaler = joblib.load('models/crop_recommendation_scaler.pkl')
+pca = joblib.load('models/crop_recommendation_pca.pkl')
+encoder = joblib.load('models/crop_recommendation_label_encoder.pkl')
 # Crop Yield Prediction Model
-yield_prediction_model = joblib.load('yield_prediction_model.pkl')
+yield_prediction_model = joblib.load('models/yield_prediction_model.pkl')
 
 # Function to predict the most suitable crop using the loaded model
 def predict_crop(n, p, k, temperature, humidity, ph, rainfall):
